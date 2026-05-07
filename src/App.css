@@ -1,0 +1,227 @@
+/*
+   Color palette fetched from tailwind styling onto hex color codes as no inline styling was to be used for this submission from Original Portfolio vansh.nyc:
+   gray-1:  #fcfcfc
+   gray-2:  #f0f0f0
+   gray-4:  #e8e8e8
+   gray-8:  #bbbbbb
+   gray-11: #646464
+   gray-12: #202020
+   pink-3:  #fee9f5
+   pink-9:  #d6409f
+   pink-11: #c2298a
+*/
+
+/*
+Root variables
+*/
+:root {
+  --gray-1: #fcfcfc;
+  --gray-2: #f0f0f0;
+  --gray-4: #e8e8e8;
+  --gray-8: #bbbbbb;
+  --gray-11: #646464;
+  --gray-12: #202020;
+  --pink-3: #fee9f5;
+  --pink-9: #d6409f;
+  --pink-11: #c2298a;
+
+  --radius-sm: 8px;
+  --radius-pill: 1rem;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+Body color and font family fetched from Original Portfolio: vansh.nyc
+*/
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.09px;
+  color: var(--gray-12);
+  background-color: var(--gray-1);
+}
+
+::selection {
+  background-color: var(--pink-3);
+  color: var(--pink-11);
+}
+
+/*
+App wrapper styling
+*/
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/*
+Header styling
+*/
+.app > header {
+  background-color: var(--gray-12);
+  color: var(--gray-1);
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.app > header h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--gray-1);
+}
+
+.app > header h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--gray-8);
+  margin-top: 0.5rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--gray-8);
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+
+.subtitle-2 {
+  font-size: 0.9rem;
+  color: var(--gray-11);
+  margin-top: 0.25rem;
+  font-weight: 300;
+}
+
+/*
+Main layout styling
+*/
+main {
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+main section {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 2px solid var(--pink-9);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  color: var(--gray-12);
+}
+
+/*
+Button styling
+*/
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.tracker-btn {
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.tracker-btn--primary {
+  background-color: var(--pink-9);
+  color: var(--gray-1);
+}
+
+.tracker-btn--primary:hover {
+  background-color: var(--pink-11);
+}
+
+.tracker-btn--reset {
+  background-color: transparent;
+  color: var(--gray-11);
+  border: 1px solid var(--gray-4);
+}
+
+.tracker-btn--reset:hover {
+  background-color: var(--gray-2);
+  color: var(--gray-12);
+}
+
+.tracker-btn:active {
+  transform: scale(0.97);
+}
+
+/*
+Empty state styling
+*/
+.empty {
+  background-color: var(--pink-3);
+  color: var(--pink-11);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-4);
+  font-size: 1rem;
+}
+
+/*
+Stats table styling
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  background-color: var(--gray-1);
+  border: 1px solid var(--gray-4);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+td {
+  border: 1px solid var(--gray-4);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  color: var(--gray-12);
+}
+
+td:first-child {
+  color: var(--gray-11);
+  font-weight: 500;
+  width: 40%;
+}
+
+tr:nth-child(even) {
+  background-color: var(--gray-2);
+}
+
+/*
+Footer styling
+*/
+.app > footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--gray-12);
+  color: var(--gray-8);
+  font-size: 0.9rem;
+}
